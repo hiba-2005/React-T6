@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# 📘 TP 6 : Découverte des Hooks Avancés et des Hooks Personnalisés
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🎯 Objectif
 
-## Available Scripts
+Ce TP a pour but de découvrir et maîtriser les hooks avancés de React :
 
-In the project directory, you can run:
+* `useReducer` pour gérer un état complexe
+* `useRef` pour manipuler le DOM et stocker des valeurs persistantes
+* `useEffect` avec nettoyage
+* Création et utilisation d’un hook personnalisé (`useFetch`)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Technologies utilisées
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* React.js
+* JavaScript (ES6)
+* HTML / CSS
+* API REST (jsonplaceholder)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Lancer le projet
 
-### `npm run build`
+```bash
+npx create-react-app tp-hooks-debutant
+cd tp-hooks-debutant
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Structure du projet
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+src/
+│── App.js
+│── App.css
+│── Compteur.js
+│── FocusInput.js
+│── CompteurRendu.js
+│── ListeArticles.js
+│── Timer.js
+│── useFetch.js
+│── index.js
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔧 Fonctionnalités
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔢 1. Compteur avec useReducer
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Gestion d’un compteur avec un reducer
+* Actions :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  * Incrémenter
+  * Décrémenter
+  * Réinitialiser
 
-## Learn More
+👉 Permet de structurer la gestion d’état
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🎯 2. Focus automatique avec useRef
 
-### Code Splitting
+* Met le curseur dans un champ input au clic d’un bouton
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👉 Exemple : formulaire ou barre de recherche
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🔁 3. Compteur de rendus
 
-### Making a Progressive Web App
+* Compte le nombre de fois où le composant est affiché
+* Utilise `useRef` + `useEffect`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+👉 Résultat visible dans la console
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🌐 4. Hook personnalisé useFetch
 
-### Deployment
+* Récupère des données depuis une API
+* Gère :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  * chargement
+  * données
+  * erreurs
 
-### `npm run build` fails to minify
+👉 Rend le code réutilisable
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### 📄 5. Liste d’articles
+
+* Utilise `useFetch`
+* Affiche les données récupérées depuis une API
+
+---
+
+### ⏱️ 6. Timer avec nettoyage
+
+* Incrémente un compteur chaque seconde
+* Nettoyage avec `clearInterval`
+
+👉 Évite les bugs mémoire
+
+---
+
+## 🧠 Concepts clés appris
+
+* Gestion d’état avancée avec `useReducer`
+* Manipulation du DOM avec `useRef`
+* Effets et nettoyage avec `useEffect`
+* Création de hooks personnalisés
+* Consommation d’API avec `fetch`
+
+---
+
+## 🎨 Améliorations réalisées
+
+* Design moderne avec CSS
+* Cartes interactives
+* Boutons stylisés
+* Interface responsive
+
+---
+
+
+https://github.com/user-attachments/assets/27af0f07-c917-4990-99a4-23a1cf2a8341
+
+
+---
+
+## 📌 Conclusion
+
+Ce TP permet de comprendre les hooks avancés de React et de créer des composants plus puissants, réutilisables et bien structurés.
+
+Il constitue une base essentielle pour développer des applications React modernes.
+
+---
